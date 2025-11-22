@@ -1,2 +1,40 @@
-<h1>Hello Ryan Gosling 💛</h1>
-<p>Bu mening GitHub’dagi birinchi saytim.</p>
+<div class="gadget">
+          <div class="gimg">X5</div>
+          <div class="ginfo"><b>Sony Xperia 1 VII</b><span style="font-size:13px;color:var(--muted)">Kamera va performance</span></div>
+          <div class="tag">Review</div>
+        </div>
+
+        <div class="gadget">
+          <div class="gimg">IP</div>
+          <div class="ginfo"><b>iPhone 16 Pro Max</b><span style="font-size:13px;color:var(--muted)">Gold rang, orqa kamera</span></div>
+          <div class="tag">Specs</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="portfolio">
+      <h3>Montaj va presetlar</h3>
+      <p>CapCut presetlar, overlaylar va montaj usullari — yuklab olish uchun alohida linklar qo'yilgan.</p>
+    </section>
+
+    <section class="card">
+      <h3>Aloqa</h3>
+      <p>Email: <span style="color:var(--neon-yellow)">your.email@example.com</span></p>
+      <p>Ijtimoiy: <span style="color:var(--neon-cyan)">@qosimov</span></p>
+    </section>
+  </div>
+
+</main>
+
+  </div>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Small progressive enhancement: if user clicks gadgets, scroll to section
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+    })
+  </script></body>
+</html>
