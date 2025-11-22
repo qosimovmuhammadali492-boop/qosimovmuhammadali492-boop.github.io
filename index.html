@@ -1,4 +1,182 @@
-<div class="gadget">
+<!doctype html>
+
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QosimovMuhammadali — Gadgets & Social</title>
+  <meta name="description" content="QosimovMuhammadali — telefonlar, gadjetlar va ijtimoiy tarmoqlar portfolio" />
+  <style>
+    :root{
+      --bg-1:#07060a; /* chuqur qora */
+      --bg-2:#0f0f13;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.03);
+      --neon-cyan: #00e6ff;
+      --neon-magenta: #ff00d1;
+      --neon-yellow: #ffdd00;
+      --muted:#cfcfd3;
+      --card-border: rgba(255,255,255,0.06);
+      --accent: linear-gradient(90deg,var(--neon-cyan),var(--neon-magenta));
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(0,230,255,0.04), transparent),
+              radial-gradient(900px 400px at 90% 90%, rgba(255,0,209,0.03), transparent),
+              linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:40px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  gap:20px;
+  min-height:100vh;
+  background-attachment:fixed;
+  letter-spacing:0.2px;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:28px;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position:relative;
+  border-radius:18px;
+  padding:22px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid var(--card-border);
+  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  min-height:420px;
+}
+
+.avatar{
+  width:88px;height:88px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);
+  display:block;margin-bottom:14px;box-shadow:0 8px 20px rgba(0,0,0,0.6);
+}
+
+.name{
+  font-size:18px;color:#fff;margin:0 0 6px 0;font-weight:600;display:flex;align-items:center;gap:8px;
+}
+.handle{font-size:12px;color:var(--neon-cyan);}
+.bio{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.45}
+
+.links{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.link{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);background:var(--glass);cursor:pointer}
+.link span{font-size:13px}
+.pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);font-size:12px}
+
+.stats{display:flex;gap:8px;margin-top:16px}
+.stat{flex:1;padding:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.02)}
+.stat b{display:block;color:#fff}
+
+/* MAIN */
+.main{
+  border-radius:18px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid var(--card-border);backdrop-filter: blur(6px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  min-height:420px;
+}
+
+.site-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.title{font-size:20px;color:#fff;font-weight:700}
+.subtitle{font-size:13px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+
+/* Card style */
+.card{padding:16px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03);min-height:120px}
+.card h3{margin:0 0 8px 0;color:#fff;font-size:14px}
+.card p{margin:0;color:var(--muted);font-size:13px}
+
+/* Gadget list */
+.gadget{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);background:var(--glass-2)}
+            .gadget .gimg{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-magenta));display:flex;align-items:center;justify-content:center;color:#020204;font-weight:700}
+.gadget .ginfo{flex:1}
+.gadget .ginfo b{display:block;color:#fff}
+.gadget .tag{font-size:12px;padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+
+/* Glass border accent */
+.accent-border{position:relative;padding:14px;border-radius:12px}
+.accent-border:before{content:'';position:absolute;inset:0;border-radius:12px;padding:1px;background:linear-gradient(90deg, rgba(0,230,255,0.5), rgba(255,0,209,0.4));-webkit-mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);pointer-events:none}
+
+/* Footer */
+.footer{margin-top:18px;font-size:13px;color:var(--muted);text-align:center}
+
+/* responsive */
+@media(max-width:920px){
+  .container{grid-template-columns:1fr;}
+  .grid{grid-template-columns:1fr}
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="avatar" />
+      <div class="name">QosimovMuhammadali <span class="handle">@qosimovmuhammadali492-boop</span></div>
+      <div class="bio">Telefonlar, gadjetlar, foto va montaj. Bu yerda mening eng yaxshi texnik tavsiyalarim va ijtimoiy havolalarim joylashgan.</div><div class="links">
+    <a class="link" href="#socials"><span>📱 Ijtimoiy tarmoqlar</span><span style="margin-left:auto" class="pill">Ochish</span></a>
+    <a class="link" href="#gadgets"><span>🔧 Gadjetlar</span><span style="margin-left:auto" class="pill">Yangilar</span></a>
+    <a class="link" href="#portfolio"><span>🎞️ Montaj va presetlar</span><span style="margin-left:auto" class="pill">Ko'rish</span></a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>120+</b><small>Post</small></div>
+    <div class="stat"><b>5</b><small>Yil</small></div>
+    <div class="stat"><b>2k</b><small>Follower</small></div>
+  </div>
+
+  <div class="footer">© <span id="year"></span> QosimovMuhammadali</div>
+</aside>
+
+<main class="main">
+  <div class="site-head">
+    <div>
+      <div class="title">Mening ijtimoiy va texnika uyingiz</div>
+      <div class="subtitle">Telefonlar, gadjetlar, montaj uchun skriptlar — barchasi bir joyda</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="pill" style="background:linear-gradient(90deg, rgba(0,0,0,0.45), rgba(255,255,255,0.02));color:var(--muted)">Ryan style</div>
+      <div class="pill" style="background:var(--glass);color:var(--neon-cyan);border:1px solid rgba(0,230,255,0.12)">Neon</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="card accent-border" id="socials">
+      <h3>Ijtimoiy tarmoqlar</h3>
+      <p>Men bilan bog'laning — Instagram, Telegram va boshqalar. Har bir link alohida karta ko'rinishida.</p>
+
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:10px">
+        <a class="gadget" href="#">
+          <div class="gimg">IG</div>
+          <div class="ginfo"><b>Instagram</b><span style="font-size:13px;color:var(--muted)">@makalassan kabi sahifalarni kuzataman</span></div>
+          <div class="tag">Follow</div>
+        </a>
+
+        <a class="gadget" href="#">
+          <div class="gimg">TG</div>
+          <div class="ginfo"><b>Telegram</b><span style="font-size:13px;color:var(--muted)">Kanal va edit fayllar</span></div>
+          <div class="tag">Join</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="card" id="gadgets">
+      <h3>So'nggi gadjetlar</h3>
+      <p>Qisqa tavsif: qaysi telefonlar sizga yoqadi va men ularni sinab ko'rganman.</p>
+
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:10px">
+                <div class="gadget">
           <div class="gimg">X5</div>
           <div class="ginfo"><b>Sony Xperia 1 VII</b><span style="font-size:13px;color:var(--muted)">Kamera va performance</span></div>
           <div class="tag">Review</div>
@@ -37,44 +215,4 @@
       })
     })
   </script></body>
-</html><div class="gadget">
-          <div class="gimg">X5</div>
-          <div class="ginfo"><b>Sony Xperia 1 VII</b><span style="font-size:13px;color:var(--muted)">Kamera va performance</span></div>
-          <div class="tag">Review</div>
-        </div>
-
-        <div class="gadget">
-          <div class="gimg">IP</div>
-          <div class="ginfo"><b>iPhone 16 Pro Max</b><span style="font-size:13px;color:var(--muted)">Gold rang, orqa kamera</span></div>
-          <div class="tag">Specs</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="portfolio">
-      <h3>Montaj va presetlar</h3>
-      <p>CapCut presetlar, overlaylar va montaj usullari — yuklab olish uchun alohida linklar qo'yilgan.</p>
-    </section>
-
-    <section class="card">
-      <h3>Aloqa</h3>
-      <p>Email: <span style="color:var(--neon-yellow)">your.email@example.com</span></p>
-      <p>Ijtimoiy: <span style="color:var(--neon-cyan)">@qosimov</span></p>
-    </section>
-  </div>
-
-</main>
-
-  </div>  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Small progressive enhancement: if user clicks gadgets, scroll to section
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const t=document.querySelector(a.getAttribute('href'));
-        if(t) t.scrollIntoView({behavior:'smooth',block:'center'});
-      })
-    })
-  </script></body>
-</html>
 </html>
