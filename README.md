@@ -1,1 +1,0 @@
-# qosimovmuhammadali492-boop.github.io
